@@ -482,7 +482,7 @@ nav .m-menu li a {
     width: 100%;
     height: 100%;
     background: #fff;
-    padding: 30px;
+    padding: 1vw;
     box-sizing: border-box;
     opacity: 0.4;
     transition: 1s;
@@ -546,8 +546,7 @@ nav .m-menu li a {
 
 #other_works .swiper-wrapper .swiper-slide .inner .con h2 {
     font-weight: normal;
-    font-size: 40px;
-    font-family: "roboto";
+    font-size: 2vw;
     color: #111;
     margin-top: 15px;
     margin-bottom: 20px;
@@ -765,8 +764,8 @@ nav .m-menu li a {
 }
 
 .skill_wrap {
-    width: 50%;
-    margin: 0 auto;
+    width: 60%;
+    margin: 4vw auto;
 }
 
 .skill_container ul {
@@ -791,7 +790,7 @@ nav .m-menu li a {
 .skill_container ul li .skill_detail {
     position: absolute;
     left: 5vw;
-    width: 14vw;
+    width: 16vw;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -986,16 +985,99 @@ div[class^=bubble-]:after {
 }
 
 /* contact */
-#contact {
-    padding: 5vw;
-}
-
 #contact .title {
     text-align: center;
 }
 
+#contact .title p {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #c7aa8d;
+    text-shadow: none;
+}
+
+.f_top h1 {
+    color: #fff;
+    color: #e07257;
+    font-size: 3vw;
+    margin-bottom: 1%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.f_top p {
+    font-size: 1.5vw;
+    text-align: center;
+    color: #c7aa8d;
+}
+
+form {
+    padding: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input {
+    border-radius: .5vw;
+    outline: none;
+    display: block;
+    width: 40vw;
+    margin-bottom: 2%;
+    padding: 1% 2vw;
+    height: 3.5vw;
+    font-size: 1.1vw;
+    box-sizing: border-box;
+    background: #FFF8E7;
+    border: 2px solid #F4DEAB;
+    color: #E2BF6E;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    transition: 0.5s ease-in-out;
+    color: #E2BF6E;
+}
+
+form input:focus::placeholder {
+    visibility: hidden;
+}
+
+form .f_message textarea {
+    border-radius: .5vw;
+    outline: none;
+    display: block;
+    width: 40vw;
+    margin-bottom: 3%;
+    padding: 1vw 2vw;
+    height: 15vw;
+    font-size: 1.1vw;
+    box-sizing: border-box;
+    background: #fff8e7;
+    border: 2px solid #f4deab;
+    color: #e2bf6e;
+}
+
+form .f_btn {
+    display: inline-block;
+    padding: 0.9vw 3vw;
+    border-radius: .5vw;
+    border: none;
+    outline: none;
+    background: #F4DEAB;
+    box-shadow: 5px 6px #d4bd87;
+    color: #d8b565;
+    font-family: 'yg-jalnan';
+    cursor: pointer;
+}
+
+form label {
+    display: none;
+}
+
 /* footer */
 footer {
+    padding: 2vw 0;
     text-align: center;
 }
 
@@ -1105,6 +1187,33 @@ footer .copyright {
 
     .skill_container ul li .skill_detail p {
         font-size: 2vw;
+    }
+
+    .f_top h1 {
+        font-size: 6vw;
+    }
+
+    .f_top p {
+        font-size: 3.3vw;
+        margin-bottom: 1%;
+    }
+
+    form input {
+        width: 75vw;
+        height: 7.5vw;
+        font-size: 2vw;
+        margin-bottom: 3%;
+    }
+
+    form .f_message textarea {
+        width: 75vw;
+        height: 33vw;
+        font-size: 2vw;
+    }
+
+    form .f_btn {
+        font-size: 2.4vw;
+        padding: 2vw 6vw;
     }
 }
 
