@@ -1,44 +1,35 @@
-const swiper = new Swiper('#other_works',{	
-    direction: "horizontal",
-    loop: true,						
-    pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction'
-    },	
-    navigation : {				
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',			
-    },
-    spaceBetween: 0,
-    slidesPerView: "auto",
-    grabCursor: true,
-    centeredSlides :true,
-    speed:2000,
-    effect:"coverflow",	
-    coverflowEffect: {
-        rotate: 50,
-        stretch: -100,
-        depth: 400,
-        modifier: 1,
-        slideShadows: false,
-    },
-    autoplay: {
-        delay:3000,		
-        disableOnInteraction : true
-    }	
+let vMove;
+let defaultSpeed = 1;
+let leftValue = 0;
+let speed = defaultSpeed;
+
+$(".works_wrap").append($(".works_wrap ul").clone());
+
+const visualMove = () => {
+    $(".works_wrap").css({ left: `${leftValue}px` });
+    if ($(".works_wrap").offset().left <= -1 * $('.works_wrap ul').outerWidth()) {
+        leftValue = 0;
+    }
+    leftValue -= speed;
+}
+
+$(".works_wrap").hover(() => {
+    if(defaultSpeed !== 0)
+    speed = 0.1;
+}, () => {
+    speed = defaultSpeed;
+})
+
+$('.works_wrap').on('mousedown', function () {
+    speed = 0;
+}).on('mouseup', function () {
+    speed = 0.3;
+}).on('mouseleave', function () {
+    speed = defaultSpeed;
 });
 
-// .btnStart 요소를 찾아서 btnStart에 저장
-const btnStart = document.querySelector(".btnStart");
-// .btnStop 요소를 찾아서 btnStop에 저장
-const btnStop = document.querySelector(".btnStop");
+vMove = setInterval(() => visualMove(), 10);
 
-//btnStart버튼을 클릭시 자동롤링 시작
-btnStart.addEventListener("click",()=>{
-    swiper.autoplay.start();
-});
 
-//btnStart버튼을 클릭시 자동롤링 정지
-btnStop.addEventListener("click",()=>{
-    swiper.autoplay.stop();
-});
+
+console.clear();
