@@ -14,7 +14,7 @@ header .fixed {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1vw 4vw;
+    padding: 1vw 2vw;
 }
 
 header h1 {
@@ -48,7 +48,7 @@ header nav .menu li a {
 }
 
 header nav .menu li:hover a {
-    color: #E07257;
+    color: #fff;
 }
 
 header nav .menu li a::before {
@@ -57,7 +57,7 @@ header nav .menu li a::before {
     bottom: 0;
     left: 0;
     transition: all 1s;
-    border-bottom: 1px solid #E07257;
+    border-bottom: 1px solid #fff;
     width: 0;
 }
 
@@ -210,224 +210,72 @@ nav .m-menu li a {
 
 
 /* project */
-.project {
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* .container {
-    display: flex;
-    width: 500vw;
-} */
-
-.sec {
-    width: 40%;
-}
-
-.sec,
-#sec1,
-#sec2,
-#sec3 {
-    position: relative;
-    height: 100vh;
-}
-
-.project_menu {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-}
-
-.project_menu ul li a {
-    font-size: 2.5vw;
-    color: #fff;
-    text-shadow: 0 4px 4px #c7aa8d;
-}
-
-.sec .project_line {
-    position: absolute;
-    right: -77%;
-    top: 50%;
-    transform: rotate(-90deg);
-}
-
-.sec .project_line p {
-    display: inline-block;
-    margin: 0 7vw;
-    font-size: 1.2vw;
-    text-transform: uppercase;
-    color: #c7aa8d;
-}
-
-.sec .project_line .btn {
-    position: absolute;
-    top: 50%;
-    left: 44%;
-    transform: translateY(-50%) rotate(90deg);
-    width: 9vw;
-    height: 9vw;
-    color: #fff;
-    box-sizing: border-box;
-    overflow: hidden;
-    background: url(../images/sticker-texture.png);
-    background-size: cover;
-    border-radius: 50%;
-    background-color: #e3c172;
-}
-
-.sec .project_line .btn span {
-    position: absolute;
-    top: 53%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5vw;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.pro_1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #e1dfd8;
-    border-radius: 1vw;
-    box-shadow: 11px 12px #d5d3cf;
-    border: 3px solid #bcbcbcc2;
-}
-
-.pro_2 {
-    background: #b6b2c1;
-    box-shadow: 11px 12px #a39db5;
-    border: 3px solid #8b82a6;
-}
-
-.pro_3 {
-    background: #c4d3d5;
-    box-shadow: 11px 12px #a8babd;
-    border: 3px solid #93a2a5;
-}
-
-.box {
-    display: flex;
-}
-
-.right {
-    padding: 1% 3%;
-}
-
-.right::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 4%;
-    width: 0.7vw;
-    height: 0.7vw;
-    border-radius: 50%;
-    background: #fff;
-}
-
-.right::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 0.7vw;
-    height: 0.7vw;
-    border-radius: 50%;
-    background: #fff;
-}
-
-.right .info_title {
-    color: #fff;
-    font-size: 2.3vw;
-    line-height: 1.5;
-    text-shadow: 2px 2px #a39db5;
-}
-
-.right .info_date,
-.right .info_tool {
-    font-size: .8vw;
-}
-
-.right .info_date span,
-.right .info_tool span {
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.right .info_description {
-    font-size: 1.1vw;
-    font-weight: bold;
-    line-height: 1.5;
-}
-
-.right .btn_wrap {
-    display: flex;
-    font-size: 1.2vw;
-    font-weight: 700;
-}
-
-.view,
-.github {
-    width: 8vw;
-    padding: 1vw;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-    border-radius: .5vw;
-}
-
-.view {
-    margin-right: 1vw;
-}
-
-.c1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45vw;
-    height: 45vw;
-    transform: translate(-50%, -50%);
-    background: #f7ebd1;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.c2 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45vw;
-    height: 45vw;
-    transform: translate(-50%, -50%);
-    background: #f9e7d7;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-.c3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45vw;
-    height: 45vw;
-    transform: translate(-50%, -50%);
-    background: #e3e5cc;
-    border-radius: 50%;
-    z-index: -1;
-}
-
-/* other_works */
-.work_container {
-    position: relative;
-    height: 100%;
+#projects {
     padding-top: 5vw;
 }
 
-.work_container .title {
-    text-align: center;
+.project_container .projects {
+    margin: 4vw 0;
+}
+
+.project_container .projects:nth-child(1) {
+    display: flex;
+    gap: 1vw;
+    padding-inline: 2vw;
+}
+
+.project_container .projects:nth-child(2) {
+    padding-inline: 2vw;
+}
+
+.projects a {
+    width: 100%;
+}
+
+.rounded {
+    position: relative;
+    width: 100%;
+    height: 31vw;
+    overflow: hidden;
+    border-radius: .5vw;
+}
+
+.project_container .projects:nth-child(2) .rounded {
+    height: 42vw;
+}
+
+.rounded img {
+    scale: 1.1;
+    transition-duration: 1s;
+}
+
+.rounded:hover img {
+    scale: 1;
+    transition-duration: 1s;
+}
+
+.rounded video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .25vw;
+}
+
+.projects span {
+    font-size: 1.5vw;
+    line-height: 2;
+    text-transform: uppercase;
+}
+
+/* other_works */
+#other_works {
+    padding: 5vw 0;
+}
+
+.work_container {
+    position: relative;
+    height: 100%;
 }
 
 .work_container>p {
@@ -441,7 +289,7 @@ nav .m-menu li a {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 8vw 0;
+    padding: 6vw 0;
     height: 20vw;
     overflow-x: hidden;
 }
@@ -590,7 +438,6 @@ nav .m-menu li a {
     font-size: 1vw;
     font-weight: 600;
     line-height: 2.5;
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
 }
 
@@ -864,6 +711,11 @@ div[class^=bubble-]:after {
 }
 
 /* contact */
+#contact {
+    padding: 5vw;
+    padding-bottom: 0;
+}
+
 #contact .title {
     text-align: center;
 }
@@ -893,7 +745,7 @@ div[class^=bubble-]:after {
 }
 
 form {
-    padding: 2vw;
+    padding: 4vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -990,6 +842,11 @@ footer .copyright {
         text-shadow: 0 0 black;
     }
 
+    .portfolio_me .title {
+        font-size: 6vw;
+        text-shadow: 0 0 black;
+    }
+
     /* header */
     header h1 a {
         font-size: 20px;
@@ -1002,6 +859,11 @@ footer .copyright {
     /* other_works */
     .work_container .works_container .works_wrap>ul>li .info_wrap .sub_title {
         font-size: 2vw;
+    }
+
+    /* wave */
+    .wave {
+        width: 3840px;
     }
 
     /* portfolio_me */

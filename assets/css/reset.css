@@ -161,6 +161,18 @@ section {
     letter-spacing: .1vw;
     font-weight: 700;
     text-transform: uppercase;
+    text-shadow: 3px 3.5px 0 #748c97;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.portfolio_me .title {
+    font-family: 'TTTtangsbudaejjigaeB';
+    font-size: 4.5vw;
+    letter-spacing: .1vw;
+    font-weight: 700;
+    text-transform: uppercase;
     text-shadow: 3px 3.5px 0 #C2A486;
     color: #795548;
     line-height: 1.2;
