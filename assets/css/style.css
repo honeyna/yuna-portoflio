@@ -48,7 +48,7 @@ header nav .menu li a {
 }
 
 header nav .menu li:hover a {
-    color: #fff;
+    color: #e3c172;
 }
 
 header nav .menu li a::before {
@@ -57,7 +57,7 @@ header nav .menu li a::before {
     bottom: 0;
     left: 0;
     transition: all 1s;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e3c172;
     width: 0;
 }
 
@@ -259,7 +259,7 @@ nav .m-menu li a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: .25vw;
+    border-radius: .5vw;
 }
 
 .projects span {
@@ -856,7 +856,33 @@ footer .copyright {
         font-size: 27px;
     }
 
+    /* projects */
+    #projects {
+        padding-top: 8vw;
+    }
+
+    .project_container .projects:nth-child(1) {
+        flex-direction: column;
+        gap: 4vw;
+    }
+
+    .rounded {
+        height: 60vw;
+    }
+
+    .rounded video {
+        border-radius: 1vw;
+    }
+
+    .projects span {
+        font-size: 3vw;
+    }
+
     /* other_works */
+    #other_works {
+        padding: 8vw 0;
+    }
+
     .work_container .works_container .works_wrap>ul>li .info_wrap .sub_title {
         font-size: 2vw;
     }
