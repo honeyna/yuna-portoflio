@@ -16,8 +16,8 @@ header .fixed {
     justify-content: space-between;
     align-items: center;
     padding: 1vw 2vw;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+    /* background: rgba(255, 255, 255, 0.7); */
+    /* box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1); */
 }
 
 header h1 {
@@ -25,12 +25,12 @@ header h1 {
 }
 
 header h1 a {
-    font-size: 23px;
+    font-size: 1vw;
     font-weight: normal;
 }
 
 header h1 a span {
-    font-size: 30px;
+    font-size: 1.5vw;
 }
 
 header nav .menu {
@@ -46,12 +46,13 @@ header nav .menu li:not(:first-child) {
 }
 
 header nav .menu li a {
-    color: #222;
-    font-size: 16px;
+    font-size: .8vw;
+    font-weight: 600;
+    color: #4f453b;
 }
 
 header nav .menu li:hover a {
-    color: #e3c172;
+    color: #748c97;
 }
 
 header nav .menu li a::before {
@@ -60,7 +61,7 @@ header nav .menu li a::before {
     bottom: 0;
     left: 0;
     transition: all 1s;
-    border-bottom: 1px solid #e3c172;
+    border-bottom: 1px solid #748c97;
     width: 0;
 }
 
@@ -211,40 +212,44 @@ nav .m-menu li a {
     top: 50%;
 }
 
-
 /* project */
-.project_container .projects {
-    margin: 4vw 0;
-}
-
-.project_container .projects {
-    padding-inline: 2vw;
-}
-
-.projects a {
-    width: 100%;
-}
-
-.rounded {
+#projects {
+    width: 50vw;
+    margin: 5vw auto;
     position: relative;
+}
+
+.project video {
     width: 100%;
-    height: 30vw;
-    overflow: hidden;
-    border-radius: .5vw;
+    border: 1vw solid #f7f8fc;
+    border-bottom: 4vw solid #f7f8fc;
+    border-radius: 1vw;
+    box-sizing: border-box;
 }
 
-.rounded video {
+.project img:nth-child(2) {
     position: absolute;
-    top: 50%;
+    width: 40%;
+    bottom: -20%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: .5vw;
+    transform: translateX(-50%);
+    z-index: -1;
 }
 
-.projects span {
-    font-size: 1.5vw;
-    line-height: 2;
-    text-transform: uppercase;
+.project img:nth-child(3) {
+    position: absolute;
+    width: 25%;
+    bottom: -20%;
+    left: -10%;
+    z-index: 1;
+}
+
+.project img:nth-child(4) {
+    position: absolute;
+    width: 15%;
+    bottom: -20%;
+    left: 90%;
+    z-index: 1;
 }
 
 /* other_works */
@@ -369,7 +374,7 @@ nav .m-menu li a {
 .c_left img:nth-of-type(2) {
     position: absolute;
     width: 5vw;
-    top: 24%;
+    top: 0;
     left: 16%;
     transform-origin: bottom;
     transform: rotate(0deg);
@@ -398,7 +403,7 @@ nav .m-menu li a {
 }
 
 .c_right .text_wrap p {
-    color: #c5a789;
+    color: #5a524a;
     font-size: 1vw;
     font-weight: 600;
     line-height: 2.5;
@@ -417,17 +422,6 @@ nav .m-menu li a {
 
 .c_right .text_wrap ul li:not(:first-child) {
     margin-left: 2vw;
-}
-
-.my_info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.my_info h2 {
-    font-size: 1.5vw;
-    color: #e3c172;
 }
 
 
@@ -697,9 +691,14 @@ div[class^=bubble-]:after {
 
 #contact .title p {
     font-size: 1vw;
+    line-height: 2.5;
     text-align: center;
     color: #c7aa8d;
     text-shadow: none;
+}
+
+#contact .title p i {
+    padding-left: 1vw;
 }
 
 .f_top h1 {
@@ -718,7 +717,7 @@ div[class^=bubble-]:after {
 }
 
 form {
-    padding: 4vw;
+    padding: 2vw;
     display: flex;
     flex-direction: column;
     align-items: center;
