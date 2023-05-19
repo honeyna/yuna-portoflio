@@ -855,6 +855,14 @@ footer .copyright {
         padding: 8vw 0;
     }
 
+    .work_container .works_container {
+        height: 60vw;
+    }
+
+    .work_container .works_container .works_wrap>ul>li {
+        height: 60vw;
+    }
+
     .work_container .works_container .works_wrap>ul>li .info_wrap .sub_title {
         font-size: 2vw;
     }
@@ -899,7 +907,7 @@ footer .copyright {
         margin: 4vw 0;
     }
 
-    #skill .title::after {
+    #skill .icons_hover {
         display: none;
     }
 
