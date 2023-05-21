@@ -52,7 +52,7 @@ header nav .menu li a {
 }
 
 header nav .menu li:hover a {
-    color: #748c97;
+    color: #3C89CD;
 }
 
 header nav .menu li a::before {
@@ -61,7 +61,7 @@ header nav .menu li a::before {
     bottom: 0;
     left: 0;
     transition: all 1s;
-    border-bottom: 1px solid #748c97;
+    border-bottom: 1px solid #3C89CD;
     width: 0;
 }
 
@@ -212,14 +212,21 @@ nav .m-menu li a {
     top: 50%;
 }
 
-/* project */
-#projects {
-    width: 50vw;
-    margin: 5vw auto;
+/* main */
+.main {
     position: relative;
+    height: 100vh;
 }
 
-.project video {
+.mian_container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main video {
     width: 100%;
     border: 1vw solid #f7f8fc;
     border-bottom: 4vw solid #f7f8fc;
@@ -227,29 +234,44 @@ nav .m-menu li a {
     box-sizing: border-box;
 }
 
-.project img:nth-child(2) {
+.main .img img:nth-child(1) {
     position: absolute;
     width: 40%;
-    bottom: -20%;
+    top: 98%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
 }
 
-.project img:nth-child(3) {
+.main .img img:nth-child(2) {
     position: absolute;
-    width: 25%;
-    bottom: -20%;
-    left: -10%;
-    z-index: 1;
+    width: 30%;
+    top: 50%;
+    left: -20%;
 }
 
-.project img:nth-child(4) {
+.main .img img:nth-child(3) {
     position: absolute;
-    width: 15%;
-    bottom: -20%;
+    width: 20%;
+    top: 52%;
     left: 90%;
-    z-index: 1;
+}
+
+/* projects */
+.projects_01 {
+    display: flex;
+}
+
+.pro_title {
+    font-size: 1.8vw;
+}
+
+.btn_more i {
+    transition: 0.3s;
+}
+
+.btn_more:hover i {
+    padding-left: 0.5vw;
 }
 
 /* other_works */
@@ -350,6 +372,7 @@ nav .m-menu li a {
 /* about */
 #about {
     position: relative;
+    padding: 5vw 0;
 }
 
 .sec_contact {
@@ -442,7 +465,7 @@ nav .m-menu li a {
     left: 50%;
     transform: translateX(-50%);
     font-family: 'TTTtangsbudaejjigaeB';
-    font-size: 1.2vw;
+    font-size: 1vw;
     text-align: center;
     color: #c5a789;
     animation: hoverMove 0.5s infinite alternate ease-in-out;
@@ -450,17 +473,17 @@ nav .m-menu li a {
 
 @keyframes hoverMove {
     0% {
-        top: 18%;
+        top: 16%;
     }
 
     100% {
-        top: 19%;
+        top: 18%;
     }
 }
 
 .skill_wrap {
     width: 60%;
-    margin: 1vw auto;
+    margin: 4vw auto;
 }
 
 .skill_container ul {

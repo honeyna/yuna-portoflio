@@ -150,16 +150,11 @@ body {
     line-height: 1.6;
 }
 
-section {
-    width: 100%;
-    box-sizing: border-box;
-}
-
 .title {
     font-family: 'TTTtangsbudaejjigaeB';
     font-size: 2.2vw;
     text-transform: uppercase;
-    text-shadow: 3px 3.5px 0 #748c97;
+    text-shadow: 3px 3.5px 0 #3C89CD;
     color: #fff;
     line-height: 1.2;
     text-align: center;
