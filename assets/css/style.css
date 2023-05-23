@@ -6,14 +6,10 @@
 /* header */
 header {
     width: 100%;
-    position: absolute;
-}
-
-.sticky {
     position: fixed;
-    z-index: 999999;
     background: rgba(255, 255, 255, 0.7);
     box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+    z-index: 99999999;
 }
 
 header .fixed {
@@ -55,7 +51,7 @@ header nav .menu li a {
 }
 
 header nav .menu li:hover a {
-    color: #3C89CD;
+    color: #868fc2;
 }
 
 header nav .menu li a::before {
@@ -64,7 +60,7 @@ header nav .menu li a::before {
     bottom: 0;
     left: 0;
     transition: all 1s;
-    border-bottom: 1px solid #3C89CD;
+    border-bottom: 1px solid #868fc2;
     width: 0;
 }
 
@@ -223,7 +219,7 @@ nav .m-menu li a {
 
 .mian_container {
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 50%;
     width: 50%;
     transform: translate(-50%, -50%);
@@ -248,15 +244,15 @@ nav .m-menu li a {
 
 .main .img img:nth-child(2) {
     position: absolute;
-    width: 30%;
-    top: 50%;
+    width: 40%;
+    top: 70%;
     left: -20%;
 }
 
 .main .img img:nth-child(3) {
     position: absolute;
-    width: 20%;
-    top: 52%;
+    width: 18%;
+    top: 60%;
     left: 90%;
 }
 
@@ -265,12 +261,16 @@ nav .m-menu li a {
     padding: 5vw 0;
 }
 
-#projects .title {
-    padding-bottom: 5vw;
+.pro_title {
+    font-size: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4vw 0 3vw;
 }
 
-.pro_title {
-    font-size: 1.8vw;
+.pro_title span {
+    font-family: 'TTTtangsbudaejjigaeB';
 }
 
 .project {
@@ -287,18 +287,12 @@ nav .m-menu li a {
 
 #projects .right {
     width: 50%;
-    padding: 4vw;
+    padding: 0 8vw;
     box-sizing: border-box;
-}
-
-.right .pro_title {
-    font-weight: 600;
-    text-transform: uppercase;
 }
 
 .right .detail {
     font-size: 0.8vw;
-    padding-top: 1vw;
 }
 
 .right .detail .sub_title {
@@ -307,12 +301,12 @@ nav .m-menu li a {
 }
 
 .right .detail p {
-    padding-bottom: 2vw;
+    padding: 1vw 0 4vw;
 }
 
 .right .detail ul {
     display: flex;
-    padding-bottom: 2vw;
+    padding: 1vw 0 4vw;
 }
 
 .right .detail ul li {
@@ -370,7 +364,7 @@ nav .m-menu li a {
     position: relative;
     display: flex;
     align-items: center;
-    padding: 6vw 0;
+    padding: 10vw 0;
     height: 20vw;
     overflow-x: hidden;
 }
@@ -443,6 +437,7 @@ nav .m-menu li a {
 .portfolio_me {
     background: #fff8f3;
     position: relative;
+    padding: 5vw;
 }
 
 .portfolio_me::before {
@@ -465,7 +460,7 @@ nav .m-menu li a {
 .sec_contact {
     display: flex;
     align-items: center;
-    padding: 3vw;
+    padding: 6vw 0 0;
 }
 
 .c_left {
@@ -538,33 +533,31 @@ nav .m-menu li a {
 /* skill */
 #skill {
     position: relative;
-    padding: 5vw;
+    padding: 5vw 0;
 }
 
 #skill .title {
-    text-align: center;
     position: relative;
 }
 
-.icons_hover {
+#skill .title::after {
+    content: 'HOVER A ICON!';
     position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: 'TTTtangsbudaejjigaeB';
-    font-size: 1vw;
-    text-align: center;
+    bottom: 0;
+    left: 16%;
     color: #c5a789;
+    font-size: 1vw;
+    text-shadow: none;
     animation: hoverMove 0.5s infinite alternate ease-in-out;
 }
 
 @keyframes hoverMove {
     0% {
-        top: 16%;
+        bottom: 0%;
     }
 
     100% {
-        top: 17%;
+        bottom: 20%;
     }
 }
 
@@ -791,24 +784,15 @@ div[class^=bubble-]:after {
 
 /* contact */
 #contact {
-    padding: 5vw;
+    padding: 5vw 0;
     padding-bottom: 0;
 }
 
-#contact .title {
-    text-align: center;
-}
-
-#contact .title p {
+#contact p {
     font-size: 1vw;
+    font-weight: 600;
     line-height: 2.5;
-    text-align: center;
     color: #c7aa8d;
-    text-shadow: none;
-}
-
-#contact .title p i {
-    padding-left: 1vw;
 }
 
 .f_top h1 {
@@ -827,7 +811,7 @@ div[class^=bubble-]:after {
 }
 
 form {
-    padding: 2vw;
+    padding: 6vw 0 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -896,6 +880,7 @@ form label {
 footer {
     padding: 2vw 0;
     text-align: center;
+    background: #fff8f3;
 }
 
 footer .copyright {
