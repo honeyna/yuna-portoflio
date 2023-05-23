@@ -185,6 +185,27 @@ body {
     left: 0;
 }
 
+@media (max-width:768px) {
+    .title {
+        padding: 0 0 0 7vw;
+        font-size: 4vw;
+        text-shadow: 0 0 black;
+    }
+
+    .title::before {
+        display: none;
+    }
+
+    .portfolio_me .title {
+        font-size: 4vw;
+        text-shadow: 0 0 black;
+    }
+
+    .portfolio_me .title::before {
+        display: none;
+    }
+}
+
 @font-face {
     font-family: 'TTTtangsbudaejjigaeB';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/TTTtangsbudaejjigaeB.woff2') format('woff2');

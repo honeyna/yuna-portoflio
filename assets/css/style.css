@@ -1,8 +1,3 @@
-:root {
-    --black: #323030;
-    --bg: #afd3e2;
-}
-
 /* header */
 header {
     width: 100%;
@@ -212,20 +207,20 @@ nav .m-menu li a {
 }
 
 /* main */
-.main {
+#main {
     position: relative;
     height: 100vh;
 }
 
 .mian_container {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
     width: 50%;
     transform: translate(-50%, -50%);
 }
 
-.main video {
+#main video {
     width: 100%;
     border: 1vw solid #f7f8fc;
     border-bottom: 4vw solid #f7f8fc;
@@ -233,27 +228,75 @@ nav .m-menu li a {
     box-sizing: border-box;
 }
 
-.main .img img:nth-child(1) {
+.btn {
+    text-transform: uppercase;
+    border: 1px solid #868fc2;
+    color: #868fc2;
+    background: #fff;
+    padding: 0.6vw 1vw;
+    border-radius: 2vw;
+    font-size: 0.8vw;
+    font-weight: 600;
+}
+
+.main .btn {
+    position: absolute;
+    bottom: 24%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.main:hover .btn {
+    opacity: 1;
+}
+
+.main img {
     position: absolute;
     width: 40%;
-    top: 98%;
+    top: 90%;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
 }
 
-.main .img img:nth-child(2) {
+.tablet img {
     position: absolute;
     width: 40%;
     top: 70%;
     left: -20%;
 }
 
-.main .img img:nth-child(3) {
+.tablet .btn {
+    position: absolute;
+    left: -7%;
+    bottom: -20%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.tablet:hover .btn {
+    opacity: 1;
+}
+
+.mobile img {
     position: absolute;
     width: 18%;
     top: 60%;
     left: 90%;
+}
+
+.mobile .btn {
+    position: absolute;
+    right: -6%;
+    bottom: -20%;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.mobile:hover .btn {
+    opacity: 1;
 }
 
 /* projects */
@@ -414,25 +457,6 @@ nav .m-menu li a {
     color: #fff;
 }
 
-
-/* wave */
-/* .wave {
-    background: url(../images/wave.png);
-    width: 7680px;
-    height: 250px;
-    animation: wave 7s linear infinite 0s;
-}*/
-
-@keyframes wave {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-1920px);
-    }
-}
-
 /* portfolio_me */
 .portfolio_me {
     background: #fff8f3;
@@ -449,6 +473,16 @@ nav .m-menu li a {
     animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0);
     top: -7%;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-1920px);
+    }
 }
 
 /* about */
@@ -903,16 +937,6 @@ footer .copyright {
         display: block;
     }
 
-    .title {
-        font-size: 6vw;
-        text-shadow: 0 0 black;
-    }
-
-    .portfolio_me .title {
-        font-size: 6vw;
-        text-shadow: 0 0 black;
-    }
-
     /* header */
     header h1 a {
         font-size: 20px;
@@ -923,7 +947,43 @@ footer .copyright {
     }
 
     /* projects */
+    .project {
+        flex-direction: column;
+    }
 
+    #projects .left,
+    #projects .right {
+        width: 100%;
+    }
+
+    #projects .right {
+        padding: 7vw;
+    }
+
+    .right .detail .sub_title {
+        font-size: 2.5vw;
+    }
+
+    .right .detail p {
+        font-size: 2vw;
+    }
+
+    .right .detail ul li {
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .right .detail .btn_more {
+        font-size: 2vw;
+    }
+
+    .projects_02 .right {
+        text-align: left;
+    }
+
+    .projects_02 .detail ul {
+        justify-content: flex-start;
+    }
 
     /* other_works */
     #other_works {
@@ -974,15 +1034,24 @@ footer .copyright {
         width: 100%;
     }
 
+    .c_right .text_wrap {
+        padding-top: 6vw;
+    }
+
     .c_right .text_wrap p {
         font-size: 2.5vw;
+    }
+
+    .my_info {
+        display: flex;
+        justify-content: space-between;
     }
 
     #skill .title {
         margin: 4vw 0;
     }
 
-    #skill .icons_hover {
+    #skill .title::after {
         display: none;
     }
 
@@ -1031,6 +1100,10 @@ footer .copyright {
 
     .skill_container ul li .skill_detail p {
         font-size: 1.8vw;
+    }
+
+    #contact p {
+        display: none;
     }
 
     .f_top h1 {
