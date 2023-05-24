@@ -1,35 +1,29 @@
-let vMove;
-let defaultSpeed = 1;
-let leftValue = 0;
-let speed = defaultSpeed;
-
-$(".works_wrap").append($(".works_wrap ul").clone());
-
-const visualMove = () => {
-    $(".works_wrap").css({ left: `${leftValue}px` });
-    if ($(".works_wrap").offset().left <= -1 * $('.works_wrap ul').outerWidth()) {
-        leftValue = 0;
-    }
-    leftValue -= speed;
-}
-
-$(".works_wrap").hover(() => {
-    if(defaultSpeed !== 0)
-    speed = 0.1;
-}, () => {
-    speed = defaultSpeed;
-})
-
-$('.works_wrap').on('mousedown', function () {
-    speed = 0;
-}).on('mouseup', function () {
-    speed = 0.3;
-}).on('mouseleave', function () {
-    speed = defaultSpeed;
+const swiper = new Swiper('.work_container',{	
+    direction: "horizontal",
+    loop: true,						
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction'
+    },	
+    navigation : {				
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',			
+    },
+    spaceBetween: 0,
+    slidesPerView: "auto",
+    grabCursor: true,
+    centeredSlides :true,
+    speed:1000,
+    effect:"coverflow",	
+    coverflowEffect: {
+        rotate: 0,
+        stretch: -0,
+        depth: 400,
+        modifier: 1,
+        slideShadows: false,
+    },
+    autoplay: {
+        delay: 3000,		
+        disableOnInteraction : true
+    }	
 });
-
-vMove = setInterval(() => visualMove(), 10);
-
-
-
-console.clear();
