@@ -388,7 +388,7 @@ nav .m-menu li a {
 
 /* other_works */
 #other_works {
-    margin: 5vw 0;
+    padding: 5vw 0;
 }
 
 .work_container {
@@ -531,8 +531,7 @@ nav .m-menu li a {
 }
 
 .swiper-pagination {
-    bottom: auto;
-    top: 50px;
+    top: 0;
     left: auto;
     right: 50px;
     width: auto;
@@ -545,17 +544,9 @@ nav .m-menu li a {
     color: #484f79;
 }
 
-/* portfolio_me */
-.portfolio_me {
-    background: #fff8f3;
-    position: relative;
-    padding: 5vw;
-}
-
-/* .portfolio_me::before {
-    content: '';
+/* wave */
+.wave {
     background: url(../images/wave.png) repeat-x;
-    position: absolute;
     width: 6400px;
     height: 250px;
     animation: wave 5s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
@@ -571,7 +562,14 @@ nav .m-menu li a {
     100% {
         transform: translateX(-1920px);
     }
-} */
+}
+
+/* portfolio_me */
+.portfolio_me {
+    background: #fff8f3;
+    position: relative;
+    padding: 5vw;
+}
 
 /* about */
 #about {
@@ -1014,6 +1012,10 @@ footer .copyright {
     .skill_container ul li .skill_detail {
         width: 20vw;
     }
+
+    .swiper-wrapper .swiper-slide .inner .con .img {
+        height: 22vw;
+    }
 }
 
 @media (max-width:768px) {
@@ -1074,20 +1076,8 @@ footer .copyright {
     }
 
     /* other_works */
-    #other_works {
-        padding: 8vw 0;
-    }
-
-    .work_container .works_container {
-        height: 60vw;
-    }
-
-    .work_container .works_container .works_wrap>ul>li {
-        height: 60vw;
-    }
-
-    .work_container .works_container .works_wrap>ul>li .info_wrap .sub_title {
-        font-size: 2vw;
+    .swiper-wrapper .swiper-slide .inner .con .img {
+        height: 40vw;
     }
 
     /* portfolio_me */

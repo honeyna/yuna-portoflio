@@ -13,7 +13,7 @@ const swiper = new Swiper('.work_container',{
     slidesPerView: "auto",
     grabCursor: true,
     centeredSlides :true,
-    speed:1000,
+    speed: 1500,
     effect:"coverflow",	
     coverflowEffect: {
         rotate: 0,
