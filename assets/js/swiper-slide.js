@@ -1,29 +1,19 @@
-const swiper = new Swiper('.work_container',{	
-    direction: "horizontal",
-    loop: true,						
+const swiper = new Swiper('.swiper-container',{				
     pagination: {
         el: '.swiper-pagination',
         type: 'fraction'
     },	
-    navigation : {				
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',			
-    },
-    spaceBetween: 0,
-    slidesPerView: "auto",
+	
+    effect: 'coverflow',
     grabCursor: true,
-    centeredSlides :true,
-    speed: 1500,
-    effect:"coverflow",	
-    coverflowEffect: {
-        rotate: 0,
-        stretch: -0,
-        depth: 400,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflow: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
         modifier: 1,
-        slideShadows: false,
+        slideShadows : true
     },
-    autoplay: {
-        delay: 3000,		
-        disableOnInteraction : true
-    }	
+    loop: true
 });

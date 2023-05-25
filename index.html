@@ -132,9 +132,10 @@
                     <div>
                         <div class="sub_title">description</div>
                         <p>
-                            React useContext를 사용해서 전역상태관리 쇼핑카트기능 구현(상품명, 금액, 갯수, 삭제)<br />
-                            상품명을 검색해서 검색어로 카테고리filter이용해서 상품카테고리 별분류 및 구현 cart안에 담겨진 갯수 확인<br />
-                            Routers를 이용해 브라우저의 주소가 현재 페이지에 맞게 갱신
+                            - React redux를 사용해서 전역상태관리로 쇼핑카트기능 구현(상품명, 금액, 상품 갯수 추가/삭제 등)<br />
+                            - Router로 이용한 사용페이지 컴포넌트 구현<br />
+                            - filter이용해서 상품명을 검색으로 카테고리별 데이터 분류 및 구현<br />
+                            - 리액트 라우터를 이용한 페이지 이동
                         </p>
                     </div>
                     <a href="https://hilarious-druid-6d9f34.netlify.app" target="_blank" class="btn_more">
@@ -171,8 +172,10 @@
                     </ul>
                     <div class="sub_title">description</div>
                     <p>
-                        slide 슬라이드 이미지 무한반복 rolling 인기검색어 롤링 menu 전체메뉴 클릭 오픈 닫기 tab 텝메뉴기능<br />
-                        메인페이지,상품페이지,로그인,회원가입등 clone 페이지 제작
+                        - 이미지 슬라이드 무한반복 기능<br />
+                        - 인기검색어 메뉴 롤링(setInterval)<br />
+                        - 클릭 이벤트로 nav menu  오픈/클로즈와 tab 텝메뉴 기능 구현<br />
+                        - 메인페이지,상품페이지,로그인,회원가입등의 페이지 구성
                     </p>
                     <a href="https://eclectic-cactus-df33d3.netlify.app/" target="_blank" class="btn_more">
                         view more
@@ -208,8 +211,8 @@
                     </ul>
                     <div class="sub_title">description</div>
                     <p>
-                        JavaScript ES6순회 배열 메서드로 전체상품 카테고리 기능 구현, <br />
-                        Responsive Web 제작
+                        - JavaScript ES6순회 배열 메서드(map, reduce)로 전체상품 카테고리 구분 기능 구현<br />
+                        - 웹표준과 웹반응(Responsive Web) 페이지 제작
                     </p>
                     <a href="https://lambent-arithmetic-f47c96.netlify.app/" target="_blank" class="btn_more">
                         view more
@@ -226,279 +229,157 @@
             <div class="title">
                 other wroks
             </div>
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://singular-sherbet-0128f3.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_01.png">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://singular-sherbet-0128f3.netlify.app/" target="_blank">
+                                <div class="con">
+                                    <div class="img">
+                                        <img src="assets/images/o_project_01.png">
+                                    </div>
+                                    <div class="other_title">teasla clone</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/react.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>teasla clone</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/react.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>useState,React-redux,styled-commonents,React-reveal</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://elaborate-lamington-514f5a.netlify.app/" target="_blank">
-                            <div class="con"> 
-                                <div class="img">
-                                    <img src="assets/images/o_project_02.png">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://elaborate-lamington-514f5a.netlify.app/" target="_blank">
+                                <div class="con"> 
+                                    <div class="img">
+                                        <img src="assets/images/o_project_02.png">
+                                    </div>
+                                    <div class="other_title">gsap</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>gsap</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>GSAP플러그인 timeline을 활용, Responsive Web제작</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://regal-jelly-b76a5c.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_03.png">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://regal-jelly-b76a5c.netlify.app/" target="_blank">
+                                <div class="con">
+                                    <div class="img">
+                                        <img src="assets/images/o_project_03.png">
+                                    </div>
+                                    <div class="other_title">movie api</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>movie api</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>Fecth API로 최근상영 영화 페이지, data prop에 접근하여 검색어 필터링</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://luminous-jelly-c3b1e3.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_04.png">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://luminous-jelly-c3b1e3.netlify.app/" target="_blank">
+                                <div class="con">
+                                    <div class="img">
+                                        <img src="assets/images/o_project_04.png">
+                                    </div>
+                                    <div class="other_title">3d controller</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>3d controller</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>css 3D와 키프레임을 활용한 animation렌딩 페이지</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://honeyna.github.io/line/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_05.png">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://tiny-gnome-f5a204.netlify.app/" target="_blank">
+                                <div class="con">
+                                    <div class="img">
+                                        <img src="assets/images/o_project_09.png">
+                                    </div>
+                                    <div class="other_title">restaurant menu</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>line</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>기존 라인 메인페이지 재구성</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://prismatic-cajeta-5362d1.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_06.png">
+                    <div class="swiper-slide">
+                        <div class="inner">
+                            <a href="https://earnest-crisp-00530b.netlify.app/" target="_blank">
+                                <div class="con">
+                                    <div class="img">
+                                        <img src="assets/images/o_project_10.png">
+                                    </div>
+                                    <div class="other_title">furniture shop</div>
+                                    <ul>
+                                        <li>
+                                            <img src="assets/images/html.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/css.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="assets/images/js.png" alt="">
+                                        </li>
+                                    </ul>
                                 </div>
-                                <h2>samyang</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>기존 삼양 메인페이지 재구현</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://honeyna.github.io/hanhwa/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_07.png">
-                                </div>
-                                <h2>hanwha cehmical</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>리뉴얼된 한화케미칼 메인페이지 구현</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <div class="con">
-                            <div class="img">
-                                <img src="assets/images/o_project_08.png">
-                            </div>
-                            <h2>3d controller</h2>
-                            <div class="subtitle">Tools</div>
-                            <ul>
-                                <li>
-                                    <img src="assets/images/html.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/css.png" alt="">
-                                </li>
-                                <li>
-                                    <img src="assets/images/js.png" alt="">
-                                </li>
-                            </ul>
-                            <div class="subtitle">Description</div>
-                            <p>리뉴얼된 한화케미칼 메인페이지 구현</p>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://tiny-gnome-f5a204.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_09.png">
-                                </div>
-                                <h2>restaurant menu</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>JavaScript ES6순회 배열 매서드 사용</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="inner">
-                        <a href="https://earnest-crisp-00530b.netlify.app/" target="_blank">
-                            <div class="con">
-                                <div class="img">
-                                    <img src="assets/images/o_project_10.png">
-                                </div>
-                                <h2>furniture shop</h2>
-                                <div class="subtitle">Tools</div>
-                                <ul>
-                                    <li>
-                                        <img src="assets/images/html.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/css.png" alt="">
-                                    </li>
-                                    <li>
-                                        <img src="assets/images/js.png" alt="">
-                                    </li>
-                                </ul>
-                                <div class="subtitle">Description</div>
-                                <p>Fetch API이용, async away비동기 방식활용</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
             </div>
-
-            <!-- 좌우버튼 -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
             
-            <!-- 페이징 버튼 -->
             <div class="swiper-pagination"></div>
         </div>
     </div>
 
+    <!-- wave -->
     <div class="wave"></div>
 
     <!-- portfolio_me -->
@@ -522,14 +403,14 @@
                             밝은 에너지로 동료들과 <strong>소통 및 협동</strong>하며 성장하기 위해 <strong>끊임없이</strong> 공부하고 <strong>센스있는</strong> 프론트엔드 개발자가 되겠습니다.
                         </p>
                         <div class="my_info">
-                            <p>
+                            <a href="tel:010-9348-9119">
                                 <i class="fa-solid fa-phone"></i>
                                 +82 10 9348 9119
-                            </p>
-                            <p>
+                            </a>
+                            <a href="mailto:yundutls@gmail.com">
                                 <i class="fa-solid fa-envelope"></i>
                                 yundutls@gmail.com
-                            </p>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -784,7 +665,7 @@
             <div class="title">
                 contact me
             </div>
-            <p>THANK YOU FOR VIEWING MY PORTFOLIO</p>
+            <p>THANK YOU FOR VIEWTING</p>
 
             <!-- modify this form HTML and place wherever you want your form -->
             <form action="https://formspree.io/f/mnqyrnen" method="POST">

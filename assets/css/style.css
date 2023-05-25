@@ -2,8 +2,9 @@
 header {
     width: 100%;
     position: fixed;
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 0 1vw 2vw rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
     z-index: 99999999;
 }
 
@@ -226,6 +227,7 @@ nav .m-menu li a {
     border-bottom: 4vw solid #f7f8fc;
     border-radius: 1vw;
     box-sizing: border-box;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn {
@@ -301,7 +303,7 @@ nav .m-menu li a {
 
 /* projects */
 #projects {
-    padding: 5vw 0;
+    padding: 6vw 0;
 }
 
 .pro_title {
@@ -309,7 +311,7 @@ nav .m-menu li a {
     font-weight: 600;
     text-transform: uppercase;
     text-align: center;
-    padding: 4vw 0 3vw;
+    padding: 10vw 0 4vw;
 }
 
 .pro_title span {
@@ -322,34 +324,42 @@ nav .m-menu li a {
 
 .project img {
     height: 100%;
+    transition: 0.3s;
+}
+
+.project .left:hover img {
+    transform: scale(1.1);
+    transition: 0.3s;
 }
 
 #projects .left {
     width: 50%;
+    overflow: hidden;
 }
 
 #projects .right {
     width: 50%;
-    padding: 0 8vw;
+    padding: 0.5vw 8vw 0;
     box-sizing: border-box;
 }
 
 .right .detail {
-    font-size: 0.8vw;
+    font-size: 1vw;
 }
 
 .right .detail .sub_title {
     text-transform: uppercase;
     font-size: 1.2vw;
+    font-weight: 600;
 }
 
 .right .detail p {
-    padding: 1vw 0 4vw;
+    padding: 0.8vw 0 2.2vw;
 }
 
 .right .detail ul {
     display: flex;
-    padding: 1vw 0 4vw;
+    padding: 0.8vw 0 2.2vw;
 }
 
 .right .detail ul li {
@@ -388,29 +398,25 @@ nav .m-menu li a {
 
 /* other_works */
 #other_works {
-    padding: 5vw 0;
+    padding: 5vw 0 0;
 }
 
 .work_container {
     width: 100%;
-    height: 100vh;
     overflow: hidden;
     position: relative;
     box-sizing: border-box;
 }
 
 /* 기본 슬라이드 프레임 */
-.swiper-wrapper {
+.swiper-container {
     width: 100%;
-    height: 80%;
+    padding: 10vw 0;
 }
 
 .swiper-wrapper .swiper-slide {
     width: 500px;
     height: 500px;
-    position: relative;
-    top: 50%;
-    margin-top: -230px;
 }
 
 .swiper-wrapper .swiper-slide .inner {
@@ -421,6 +427,14 @@ nav .m-menu li a {
     box-sizing: border-box;
     opacity: 0.4;
     transition: 1s;
+}
+
+.swiper-3d .swiper-slide-shadow-left {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+}
+
+.swiper-3d .swiper-slide-shadow-right {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
 }
 
 .swiper-wrapper .swiper-slide-active .inner {
@@ -477,7 +491,7 @@ nav .m-menu li a {
 
 .swiper-wrapper .swiper-slide .inner .con .img {
     width: 100%;
-    height: 10vw;
+    height: 300px;
     overflow: hidden;
 }
 
@@ -485,30 +499,24 @@ nav .m-menu li a {
     width: 100%;
 }
 
-.swiper-wrapper .swiper-slide .inner .con h2 {
+.swiper-wrapper .swiper-slide .inner .con .other_title {
     font-weight: 600;
-    font-size: 2vw;
+    font-size: 1.2vw;
     margin-top: 1vw;
     text-transform: uppercase;
 }
 
-.swiper-wrapper .swiper-slide .inner .con h2::after {
+.swiper-wrapper .swiper-slide .inner .con .other_title::after {
     content: "";
     display: block;
     width: 30px;
     height: 1px;
     background-color: #868fc2;
-    margin-top: 1vw;
     transition: 1s 0.5s;
 }
 
-.swiper-wrapper .swiper-slide-active .inner .con h2::after {
+.swiper-wrapper .swiper-slide-active .inner .con .other_title::after {
     width: 100px;
-}
-
-.swiper-wrapper .swiper-slide .inner .con .subtitle {
-    font-size: 1vw;
-    padding: 0.5vw 0;
 }
 
 .swiper-wrapper .swiper-slide .inner .con .subtitle:first-child {
@@ -517,11 +525,12 @@ nav .m-menu li a {
 
 .swiper-wrapper .swiper-slide .inner .con ul {
     display: flex;
+    margin-top: 1vw;
 }
 
 .swiper-wrapper .swiper-slide .inner .con ul li {
-    width: 1vw;
-    height: 1vw;
+    width: 1.5vw;
+    height: 1.5vw;
     padding-right: 0.5vw;
 }
 
@@ -623,7 +632,7 @@ nav .m-menu li a {
 }
 
 .c_right .text_wrap {
-    width: 80%;
+    width: 83%;
     margin: 0 auto;
 }
 
@@ -647,6 +656,21 @@ nav .m-menu li a {
 
 .c_right .text_wrap ul li:not(:first-child) {
     margin-left: 2vw;
+}
+
+.c_right .text_wrap .my_info {
+    margin-top: 1vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.c_right .text_wrap .my_info a {
+    font-size: 1vw;
+    color: #5a524a;
+}
+
+.c_right .text_wrap .my_info a:last-child {
+    margin-top: .8vw;
 }
 
 
@@ -910,6 +934,7 @@ div[class^=bubble-]:after {
 
 #contact p {
     font-size: 1vw;
+    padding-left: 1vw;
     font-weight: 600;
     line-height: 2.5;
     color: #c7aa8d;
@@ -1050,6 +1075,10 @@ footer .copyright {
         padding: 7vw;
     }
 
+    .pro_title {
+        font-size: 3vw;
+    }
+
     .right .detail .sub_title {
         font-size: 2.5vw;
     }
@@ -1076,6 +1105,11 @@ footer .copyright {
     }
 
     /* other_works */
+    .swiper-wrapper .swiper-slide .inner {
+        width: 90%;
+        margin: 0 auto;
+    }
+
     .swiper-wrapper .swiper-slide .inner .con .img {
         height: 40vw;
     }
