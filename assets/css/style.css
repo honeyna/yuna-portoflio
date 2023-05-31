@@ -283,7 +283,16 @@ nav .m-menu li a {
     position: absolute;
     width: 40%;
     top: 70%;
-    left: -20%;
+    left: -40%;
+    opacity: 0;
+    animation: tablet 1.5s forwards;
+}
+
+@keyframes tablet {
+    to {
+        left: -20%;
+        opacity: 1;
+    }
 }
 
 .tablet .btn {
@@ -302,7 +311,16 @@ nav .m-menu li a {
     position: absolute;
     width: 18%;
     top: 60%;
-    left: 90%;
+    left: 110%;
+    opacity: 0;
+    animation: mobile 1.5s forwards;
+}
+
+@keyframes mobile {
+    to {
+        left: 90%;
+        opacity: 1;
+    }
 }
 
 .mobile .btn {
@@ -386,6 +404,10 @@ nav .m-menu li a {
     flex-direction: column;
     list-style-type: circle;
     margin-left: 1.2vw;
+}
+
+.right .detail ul.des li {
+    padding: 0;
 }
 
 .right .detail .btn_more {
@@ -562,7 +584,7 @@ nav .m-menu li a {
 
 .swiper-wrapper .swiper-slide .inner .con .img {
     width: 100%;
-    height: 300px;
+    height: 320px;
     overflow: hidden;
 }
 
@@ -1140,7 +1162,17 @@ footer .copyright {
     }
 
     .mian_container {
-        width: 65%;
+        width: 70%;
+    }
+
+    .main .btn,
+    .tablet .btn,
+    .mobile .btn {
+        display: none;
+    }
+
+    .tablet img {
+        left: -10%;
     }
 
     /* projects */
@@ -1210,17 +1242,13 @@ footer .copyright {
         margin: 0 auto;
     }
 
-    .swiper-wrapper .swiper-slide .inner .con .img {
-        height: 40vw;
-    }
-
     .swiper-wrapper .swiper-slide .inner .con .other_title {
-        font-size: 4vw;
+        font-size: 3vw;
         margin-top: 2vw;
     }
 
     .swiper-wrapper .swiper-slide .inner .con ul {
-        margin-top: 4vw;
+        margin-top: 2vw;
     }
 
     .swiper-wrapper .swiper-slide .inner .con ul li {
@@ -1366,15 +1394,15 @@ footer .copyright {
     }
 }
 
-@media (max-width:480px) {
+@media (max-width:520px) {
 
     /* other works */
     .swiper-wrapper .swiper-slide .inner {
         width: 90%;
     }
 
-    .swiper-wrapper .swiper-slide .inner .con .img {
-        height: 60vw;
+    .swiper-wrapper .swiper-slide .inner .con .other_title {
+        font-size: 4vw;
     }
 
     /* skill */
