@@ -355,7 +355,7 @@ nav .m-menu li a {
 
 #projects .right {
     width: 50%;
-    padding: 0.5vw 8vw 0;
+    padding: 0.5vw 6vw 0;
     box-sizing: border-box;
 }
 
@@ -382,17 +382,77 @@ nav .m-menu li a {
     padding-right: 1vw;
 }
 
+.right .detail ul.des {
+    flex-direction: column;
+    list-style-type: circle;
+    margin-left: 1.2vw;
+}
+
 .right .detail .btn_more {
     font-size: 1vw;
     text-transform: uppercase;
+    position: relative;
 }
 
-.btn_more i {
-    transition: 0.3s;
+.btn_more div {
+    position: absolute;
+    width: 0.8vw;
+    height: 1vw;
+    top: 10%;
+    background: url(../images/arrow_1.png) no-repeat 50% 50%;
+    background-size: 35px 35px;
 }
 
-.btn_more:hover i {
-    padding-left: 0.5vw;
+.btn_more div:nth-child(1) {
+    animation: scrollright 1300ms 650ms linear infinite;
+    animation-fill-mode: backwards;
+}
+
+.btn_more div:nth-child(2) {
+    animation: scrollright 1300ms linear infinite;
+}
+
+@keyframes scrollright {
+    0% {
+        right: -20%;
+        opacity: 0;
+    }
+
+    50% {
+        right: -40%;
+        opacity: 0.5;
+    }
+
+    100% {
+        right: -60%;
+        opacity: 0;
+    }
+}
+
+.btn_more.left div:nth-child(1) {
+    animation: scrollleft 1300ms 650ms linear infinite;
+    animation-fill-mode: backwards;
+}
+
+.btn_more.left div:nth-child(2) {
+    animation: scrollleft 1300ms linear infinite;
+}
+
+@keyframes scrollleft {
+    0% {
+        left: -60%;
+        opacity: 0;
+    }
+
+    50% {
+        left: -40%;
+        opacity: 0.3;
+    }
+
+    100% {
+        left: -20%;
+        opacity: 0;
+    }
 }
 
 .projects_02 {
@@ -1052,7 +1112,7 @@ footer .copyright {
     }
 
     .swiper-wrapper .swiper-slide .inner .con .img {
-        height: 22vw;
+        height: 30vw;
     }
 }
 
@@ -1109,13 +1169,32 @@ footer .copyright {
         font-size: 2.5vw;
     }
 
-    .right .detail ul li {
-        width: 4vw;
-        height: 4vw;
+    .right .detail ul li svg {
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .right .detail ul.des {
+        font-size: 2.5vw;
+        margin-left: 3vw;
     }
 
     .right .detail .btn_more {
-        font-size: 2vw;
+        font-size: 3vw;
+    }
+
+    .btn_more div {
+        width: 3vw;
+        height: 3vw;
+        top: 20%;
+    }
+
+    .btn_more.left div:nth-child(1) {
+        animation: scrollright 1300ms 650ms linear infinite;
+    }
+
+    .btn_more.left div:nth-child(2) {
+        animation: scrollright 1300ms linear infinite;
     }
 
     .projects_02 .right {
@@ -1136,7 +1215,7 @@ footer .copyright {
     }
 
     .swiper-wrapper .swiper-slide .inner .con .other_title {
-        font-size: 3vw;
+        font-size: 4vw;
         margin-top: 2vw;
     }
 
@@ -1288,6 +1367,15 @@ footer .copyright {
 }
 
 @media (max-width:480px) {
+
+    /* other works */
+    .swiper-wrapper .swiper-slide .inner {
+        width: 90%;
+    }
+
+    .swiper-wrapper .swiper-slide .inner .con .img {
+        height: 60vw;
+    }
 
     /* skill */
     .skill_container ul {
