@@ -1129,12 +1129,14 @@ footer .copyright {
 }
 
 @media (max-width:1024px) {
-    .skill_container ul li .skill_detail {
-        width: 20vw;
+
+    /* main */
+    #main {
+        height: 600px;
     }
 
-    .swiper-wrapper .swiper-slide .inner .con .img {
-        height: 30vw;
+    .skill_container ul li .skill_detail {
+        width: 20vw;
     }
 }
 
@@ -1169,10 +1171,6 @@ footer .copyright {
     .tablet .btn,
     .mobile .btn {
         display: none;
-    }
-
-    .tablet img {
-        left: -10%;
     }
 
     /* projects */
@@ -1251,10 +1249,8 @@ footer .copyright {
         margin-top: 2vw;
     }
 
-    .swiper-wrapper .swiper-slide .inner .con ul li {
-        width: 4vw;
-        height: 4vw;
-        padding-right: 2vw;
+    .swiper-wrapper .swiper-slide .inner .con ul li:not(:first-child) {
+        padding-left: 2vw;
     }
 
     /* portfolio_me */
@@ -1396,6 +1392,12 @@ footer .copyright {
 
 @media (max-width:520px) {
 
+    /* projcet */
+    .project .left:hover img {
+        transform: scale(1);
+        transition: 0s;
+    }
+
     /* other works */
     .swiper-wrapper .swiper-slide .inner {
         width: 90%;
@@ -1403,6 +1405,11 @@ footer .copyright {
 
     .swiper-wrapper .swiper-slide .inner .con .other_title {
         font-size: 4vw;
+        margin-top: 4vw;
+    }
+
+    .swiper-wrapper .swiper-slide .inner .con ul {
+        margin-top: 4vw;
     }
 
     /* skill */
