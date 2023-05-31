@@ -378,11 +378,6 @@ nav .m-menu li a {
     padding: 0.8vw 0 2.2vw;
 }
 
-.right .detail ul li {
-    width: 2vw;
-    height: 2vw;
-}
-
 .right .detail ul li:not(:last-child) {
     padding-right: 1vw;
 }
@@ -1103,15 +1098,15 @@ footer .copyright {
     }
 
     .pro_title {
-        font-size: 3vw;
+        font-size: 3.5vw;
     }
 
     .right .detail .sub_title {
-        font-size: 2.5vw;
+        font-size: 3vw;
     }
 
     .right .detail p {
-        font-size: 2vw;
+        font-size: 2.5vw;
     }
 
     .right .detail ul li {
@@ -1305,6 +1300,14 @@ footer .copyright {
 
     .skill_container ul li:hover {
         padding: 2vw 6vw;
+    }
+
+    .skill_detail .skill_name span {
+        font-size: 3vw;
+    }
+
+    .skill_container ul li .skill_detail p {
+        font-size: 2vw;
     }
 
     /* footer */
