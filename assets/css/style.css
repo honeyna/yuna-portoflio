@@ -172,8 +172,8 @@ nav .m-menu li a {
     position: fixed;
     display: none;
     width: 30px;
-    top: 2%;
-    right: 2%;
+    top: 3vw;
+    right: 2vw;
     z-index: 99999;
     cursor: pointer;
 }
@@ -205,6 +205,22 @@ nav .m-menu li a {
     transform: rotate(45deg);
     position: absolute;
     top: 50%;
+}
+
+/* topBtn */
+#top_btn {
+    position: fixed;
+    right: 1vw;
+    bottom: 1vw;
+    background: #868fc2;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: transparent;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* main */
@@ -510,7 +526,7 @@ nav .m-menu li a {
     content: "";
     display: block;
     width: 30px;
-    height: 1px;
+    height: 2px;
     background-color: #868fc2;
     transition: 1s 0.5s;
 }
@@ -528,10 +544,12 @@ nav .m-menu li a {
     margin-top: 1vw;
 }
 
-.swiper-wrapper .swiper-slide .inner .con ul li {
-    width: 1.5vw;
-    height: 1.5vw;
-    padding-right: 0.5vw;
+.swiper-wrapper .swiper-slide .inner .con ul li:not(:first-child) {
+    padding-left: 1vw;
+}
+
+.swiper-wrapper .swiper-slide .inner .con ul li p {
+    font-size: 1vw;
 }
 
 .swiper-button-next,
@@ -1061,6 +1079,15 @@ footer .copyright {
         font-size: 27px;
     }
 
+    /* main */
+    #main {
+        height: 420px;
+    }
+
+    .mian_container {
+        width: 65%;
+    }
+
     /* projects */
     .project {
         flex-direction: column;
@@ -1106,12 +1133,26 @@ footer .copyright {
 
     /* other_works */
     .swiper-wrapper .swiper-slide .inner {
-        width: 90%;
         margin: 0 auto;
     }
 
     .swiper-wrapper .swiper-slide .inner .con .img {
         height: 40vw;
+    }
+
+    .swiper-wrapper .swiper-slide .inner .con .other_title {
+        font-size: 3vw;
+        margin-top: 2vw;
+    }
+
+    .swiper-wrapper .swiper-slide .inner .con ul {
+        margin-top: 4vw;
+    }
+
+    .swiper-wrapper .swiper-slide .inner .con ul li {
+        width: 4vw;
+        height: 4vw;
+        padding-right: 2vw;
     }
 
     /* portfolio_me */
@@ -1157,6 +1198,10 @@ footer .copyright {
     .my_info {
         display: flex;
         justify-content: space-between;
+    }
+
+    .c_right .text_wrap .my_info a {
+        font-size: 2.5vw;
     }
 
     #skill .title {
