@@ -283,9 +283,9 @@ nav .m-menu li a {
     position: absolute;
     width: 40%;
     top: 70%;
-    left: -40%;
+    left: -100%;
     opacity: 0;
-    animation: tablet 1.5s forwards;
+    animation: tablet 5s forwards;
 }
 
 @keyframes tablet {
@@ -311,14 +311,14 @@ nav .m-menu li a {
     position: absolute;
     width: 18%;
     top: 60%;
-    left: 110%;
+    left: 150%;
     opacity: 0;
-    animation: mobile 1.5s forwards;
+    animation: mobile 5s forwards;
 }
 
 @keyframes mobile {
     to {
-        left: 90%;
+        left: 85%;
         opacity: 1;
     }
 }
@@ -402,8 +402,6 @@ nav .m-menu li a {
 
 .right .detail ul.des {
     flex-direction: column;
-    list-style-type: circle;
-    margin-left: 1.2vw;
 }
 
 .right .detail ul.des li {
@@ -414,13 +412,14 @@ nav .m-menu li a {
     font-size: 1vw;
     text-transform: uppercase;
     position: relative;
+    padding-left: 50px;
 }
 
 .btn_more div {
     position: absolute;
     width: 0.8vw;
     height: 1vw;
-    top: 10%;
+    top: 3px;
     background: url(../images/arrow_1.png) no-repeat 50% 50%;
     background-size: 35px 35px;
 }
@@ -436,43 +435,17 @@ nav .m-menu li a {
 
 @keyframes scrollright {
     0% {
-        right: -20%;
+        left: 0;
         opacity: 0;
     }
 
     50% {
-        right: -40%;
+        left: 15px;
         opacity: 0.5;
     }
 
     100% {
-        right: -60%;
-        opacity: 0;
-    }
-}
-
-.btn_more.left div:nth-child(1) {
-    animation: scrollleft 1300ms 650ms linear infinite;
-    animation-fill-mode: backwards;
-}
-
-.btn_more.left div:nth-child(2) {
-    animation: scrollleft 1300ms linear infinite;
-}
-
-@keyframes scrollleft {
-    0% {
-        left: -60%;
-        opacity: 0;
-    }
-
-    50% {
-        left: -40%;
-        opacity: 0.3;
-    }
-
-    100% {
-        left: -20%;
+        left: 30px;
         opacity: 0;
     }
 }
@@ -696,7 +669,7 @@ nav .m-menu li a {
 .c_left img:nth-of-type(1) {
     display: block;
     margin: 0 auto;
-    border-radius: 50% 50% 1vw 1vw;
+    border-radius: 12vw;
     width: 50%;
 }
 
@@ -1236,6 +1209,26 @@ footer .copyright {
     }
 
     /* other_works */
+    #other_works .title:after {
+            content: 'MOUSE A DRAG!';
+            position: absolute;
+            bottom: 0;
+            left: 16%;
+            color: #868fc2;
+            font-size: 1vw;
+            text-shadow: none;
+            animation: mouseMove 0.5s infinite alternate ease-in-out;
+        
+        }
+        @keyframes mouseMove {
+            0% {
+                bottom: 0%;
+            }
+        
+            100% {
+                bottom: 20%;
+            }
+        }
     .swiper-wrapper .swiper-slide .inner {
         margin: 0 auto;
     }
