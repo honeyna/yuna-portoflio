@@ -417,11 +417,7 @@ nav .m-menu li a {
 
 .btn_more div {
     position: absolute;
-    width: 0.8vw;
-    height: 1vw;
-    top: 3px;
-    background: url(../images/arrow_1.png) no-repeat 50% 50%;
-    background-size: 35px 35px;
+    top: 0;
 }
 
 .btn_more div:nth-child(1) {
@@ -663,17 +659,32 @@ nav .m-menu li a {
 .c_left {
     position: relative;
     width: 50%;
-    font-family: 'TTTtangsbudaejjigaeB';
 }
 
-.c_left img:nth-of-type(1) {
-    display: block;
-    margin: 0 auto;
-    border-radius: 12vw;
+.my_photo {
+    position: relative;
     width: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
-.c_left img:nth-of-type(2) {
+.c_left .my_bg {
+    position: relative;
+    height: 35vw;
+    overflow: hidden;
+    filter: blur(460px);
+    background: #ffd9a7;
+}
+
+.c_left .my {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.c_left .hand {
     position: absolute;
     width: 5vw;
     top: 0;
@@ -1210,25 +1221,27 @@ footer .copyright {
 
     /* other_works */
     #other_works .title:after {
-            content: 'MOUSE A DRAG!';
-            position: absolute;
-            bottom: 0;
-            left: 16%;
-            color: #868fc2;
-            font-size: 1vw;
-            text-shadow: none;
-            animation: mouseMove 0.5s infinite alternate ease-in-out;
-        
+        content: 'MOUSE A DRAG!';
+        position: absolute;
+        bottom: 0;
+        left: 16%;
+        color: #868fc2;
+        font-size: 1vw;
+        text-shadow: none;
+        animation: mouseMove 0.5s infinite alternate ease-in-out;
+
+    }
+
+    @keyframes mouseMove {
+        0% {
+            bottom: 0%;
         }
-        @keyframes mouseMove {
-            0% {
-                bottom: 0%;
-            }
-        
-            100% {
-                bottom: 20%;
-            }
+
+        100% {
+            bottom: 20%;
         }
+    }
+
     .swiper-wrapper .swiper-slide .inner {
         margin: 0 auto;
     }
@@ -1260,15 +1273,11 @@ footer .copyright {
         width: 100%;
     }
 
-    .c_left h2 {
-        font-size: 5.5vw;
+    .c_left .my_bg {
+        height: 60vw;
     }
 
-    .c_left p {
-        font-size: 3vw;
-    }
-
-    .c_left img:nth-of-type(2) {
+    .c_left .hand {
         width: 10vw;
         top: 4%;
         left: 14%;
