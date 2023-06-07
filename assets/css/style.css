@@ -325,7 +325,7 @@ nav .m-menu li a {
 
 .mobile .btn {
     position: absolute;
-    right: -6%;
+    right: -1%;
     bottom: -20%;
     opacity: 0;
     transition: all 1s;
@@ -671,7 +671,7 @@ nav .m-menu li a {
 
 .c_left .my_bg {
     position: relative;
-    height: 35vw;
+    height: 600px;
     overflow: hidden;
     filter: blur(460px);
     background: #ffd9a7;
